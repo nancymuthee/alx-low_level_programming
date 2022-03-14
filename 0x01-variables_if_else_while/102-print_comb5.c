@@ -1,9 +1,9 @@
-nclude <stdio.h>
+#include <stdio.h>
 /**
  *  * main - Program entry point
  *   *
  *    * Return: 0 on success. Error code otherwise
- *     */
+ */
 int main(void)
 {
 int c, i, k, j;
@@ -23,8 +23,10 @@ putchar(' ');
 putchar(k);
 putchar(j);
 if (c + i + k + j == 227 && c == 57)
-{break;
-}else
+{
+break;
+}
+else
 {
 putchar(',');
 putchar(' ');
