@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *  * main - output int, entry, inpu void
+ * main - Entry point
  * 
- * return zero mean true
+ * Return:Always0(success)
  */
 int main(void)
 {
