@@ -15,7 +15,7 @@ return (NULL);
 
 for (len = 0; str[len]; len++)
 ;
-ptr = (char *)malloc(len * sizeof(char) +1);
+ptr = (char *)malloc(len * sizeof(char) + 1);
 
 if (!ptr)
 return (NULL);
