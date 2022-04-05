@@ -3,7 +3,7 @@
 /**
  * _strdup - duplicate to new memory space location
  * @str: char
- * Return: 0
+ * Return: ponter to cpied string (success), NULL (Error)
  */
 char *_strdup(char *str)
 {
