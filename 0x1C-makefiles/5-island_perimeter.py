@@ -1,22 +1,29 @@
 #!/usr/bin/python3
-"""5-island_perimeter module"""
-
+"""
+Island Perimeter
+"""
 
 def island_perimeter(grid):
-    """Returns the perimeter of the island described in grid"""
-    c = 0
-    length = len(grid) - 1
-    width = len(grid[0]) - 1
-
-    for i, r in enumerate(grid):
-        for j, n in enumerate(r):
-            if n == 1:
-                if i == 0 or grid[i - 1][j] != 1:
-                    c += 1
-                if j == 0 or grid[i][j - 1] != 1:
-                    c += 1
-                if j == width or grid[i][j + 1] != 1:
-                    c += 1
-                if i == length or grid[i + 1][j] != 1:
-                    c += 1
-    return 
+    """returns the perimeter of the island described in grid
+    Args:
+        grid(matrix): input grid
+    Description:
+        Traverse the land mass, and
+        for the lake's nearest neighbor
+        then return the total length
+    """
+    y = 0
+    x = 0
+    
+    for row in range(1, len(grid) - 1):
+            for col in range(1, len(grid[row]) - 1):
+                if grid[row][col] == 1:
+                    if grid[row][col - 1] == 0:
+                        y += 1
+                    if grid[row][col + 1] == 0:
+                        y += 1
+                    if grid[row - 1][col] == 0:
+                        x += 1
+                    if grid[row + 1][col] == 0:
+                        x += 1
+    return x + y
